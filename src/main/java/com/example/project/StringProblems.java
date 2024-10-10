@@ -56,8 +56,17 @@ public class StringProblems{
     // withoutX("xHi") → "Hi"
     // withoutX("Hxix") → "Hxi"
     public String withoutX(String s1){
-        if (s1.substring(0,1).equals("x") || s1.substring(s1.length-1).equals("x") ) {
-
+        if (s1.substring(0,1).equals("x") && s1.substring(s1.length-1).equals("x") ) {
+            return s1.substring(2,s1.length-1);
+        }
+        else if (s1.substring(0,1).equals("x")) {
+            return s1.substring(2);
+        }
+        else if (s1.substring(s1.length-1).equals("x")) {
+            return s1.substring(0,s1.length-1);
+        }
+        else {
+            return s1.substring(0);
         }
         return "";
     }
@@ -70,6 +79,10 @@ public class StringProblems{
     // fizzString("dib") → "Buzz"
     // fizzString("fib") → "FizzBuzz"
     public String fizzString(String s1){
+        if (s1.substring(0,1).equals("f") && s1.substring(s1.length-1).equals("b")) {
+            return "FizzBuzz";
+        } 
+        else if (s1.substring(0,1).equals("f"))
         return "";
     }
 
