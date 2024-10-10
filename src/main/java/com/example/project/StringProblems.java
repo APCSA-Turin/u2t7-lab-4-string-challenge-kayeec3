@@ -82,7 +82,12 @@ public class StringProblems{
         if (s1.substring(0,1).equals("f") && s1.substring(s1.length-1).equals("b")) {
             return "FizzBuzz";
         } 
-        else if (s1.substring(0,1).equals("f"))
+        else if (s1.substring(0,1).equals("f")) {
+            return "Fizz";
+        }
+        else if (s1.substring(s1.length-1).equals("b")) {
+            return "Buzz";
+        }
         return "";
     }
 
@@ -96,6 +101,7 @@ public class StringProblems{
     // fizzString2(2) → "2!"
     // fizzString2(3) → "Fizz!"
     public String fizzString2(int x){
+        
         return "";
     }
 }
